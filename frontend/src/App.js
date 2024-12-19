@@ -37,7 +37,8 @@ function App() {
 
   // WebSocket connection for receiving logs in real-time
   useEffect(() => {
-    const socket = new WebSocket("ws://localhost:4000");
+    const socket = new WebSocket("ws://backend:4000");
+
 
     socket.onmessage = (event) => {
       const data = JSON.parse(event.data);
