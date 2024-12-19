@@ -90,7 +90,8 @@ app.delete("/api/logs", (req, res) => {
   res.status(200).json({ message: "Logs cleared successfully." });
 });
 
-// Start the server
-server.listen(PORT, () => {
-  console.log(`Server is running on http://localhost:${PORT}`);
+const HOST = "0.0.0.0"; // Allow connections from any host (required for Docker)
+server.listen(PORT, HOST, () => {
+  console.log(`Server is running on http://${HOST}:${PORT}`);
 });
+
