@@ -6,14 +6,16 @@ services:
       - "4000:4000"
     networks:
       - front
+    restart: always
 
   frontend:
     build:
       context: ./frontend
     ports:
-      - "3000:3000"
+      - "80:3000"
     networks:
       - front
+    restart: always
 
 networks:
   front:
