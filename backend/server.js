@@ -50,7 +50,7 @@ function generateLog() {
 }
 
 // Generate a log every 5 seconds (simulate real-time log generation)
-setInterval(generateLog, 5000);
+setInterval(generateLog, 100);
 
 // HTTP endpoint to fetch historical logs
 app.get("/api/logs", (req, res) => {
